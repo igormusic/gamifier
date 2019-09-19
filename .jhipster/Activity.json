@@ -1,0 +1,42 @@
+{
+    "name": "Activity",
+    "fields": [
+        {
+            "fieldName": "dateTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "behaviour",
+            "otherEntityRelationshipName": "activity",
+            "relationshipName": "behaviour",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "employee",
+            "otherEntityRelationshipName": "activity",
+            "relationshipName": "employee",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "achievementProgress",
+            "otherEntityRelationshipName": "activity",
+            "relationshipName": "achievementProgress",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190919034427",
+    "entityTableName": "activity",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

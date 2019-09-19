@@ -1,0 +1,9 @@
+{
+  "gamifierApp": {
+    "AchievementStatus": {
+      "null": "",
+      "PENDING": "PENDING",
+      "COMPLETE": "COMPLETE"
+    }
+  }
+}

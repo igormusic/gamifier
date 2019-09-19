@@ -5,7 +5,7 @@ entity Employee {
 }
 
 entity Team {
-	teamName String required
+	name String required
 }
 
 entity Behaviour{

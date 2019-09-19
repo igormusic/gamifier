@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="employee">
+            <h2><span jhiTranslate="gamifierApp.employee.detail.title">Employee</span> {{employee.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gamifierApp.employee.name">Name</span></dt>
+                <dd>
+                    <span>{{employee.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="gamifierApp.employee.email">Email</span></dt>
+                <dd>
+                    <span>{{employee.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="gamifierApp.employee.externalReference">External Reference</span></dt>
+                <dd>
+                    <span>{{employee.externalReference}}</span>
+                </dd>
+                <dt><span jhiTranslate="gamifierApp.employee.team">Team</span></dt>
+                <dd>
+                    <div *ngIf="employee.teamId">
+                        <a [routerLink]="['/team', employee.teamId, 'view']">{{employee.teamName}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/employee', employee.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

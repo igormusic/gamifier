@@ -1,0 +1,39 @@
+{
+    "name": "AchievementBehaviour",
+    "fields": [
+        {
+            "fieldName": "times",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": 1
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "achievement",
+            "otherEntityRelationshipName": "behaviour",
+            "relationshipName": "achievement",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "behaviour",
+            "otherEntityRelationshipName": "achievement",
+            "relationshipName": "behaviour",
+            "otherEntityField": "name"
+        }
+    ],
+    "changelogDate": "20190919034426",
+    "entityTableName": "achievement_behaviour",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

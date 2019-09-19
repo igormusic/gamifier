@@ -1,0 +1,23 @@
+{
+  "gamifierApp": {
+    "achievementProgress": {
+      "home": {
+        "title": "Achievement Progresses",
+        "createLabel": "Create a new Achievement Progress",
+        "createOrEditLabel": "Create or edit a Achievement Progress",
+        "notFound": "No Achievement Progresses found"
+      },
+      "created": "A new Achievement Progress is created with identifier {{ param }}",
+      "updated": "A Achievement Progress is updated with identifier {{ param }}",
+      "deleted": "A Achievement Progress is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Achievement Progress {{ id }}?"
+      },
+      "detail": {
+        "title": "Achievement Progress"
+      },
+      "status": "Status",
+      "activity": "Activity"
+    }
+  }
+}

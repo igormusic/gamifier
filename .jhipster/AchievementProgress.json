@@ -1,0 +1,29 @@
+{
+    "name": "AchievementProgress",
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "AchievementStatus",
+            "fieldValues": "PENDING,COMPLETE"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "activity",
+            "otherEntityRelationshipName": "achievementProgress",
+            "relationshipName": "activity",
+            "otherEntityField": "name",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190919034428",
+    "entityTableName": "achievement_progress",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

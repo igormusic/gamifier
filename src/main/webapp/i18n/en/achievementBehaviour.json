@@ -1,0 +1,24 @@
+{
+  "gamifierApp": {
+    "achievementBehaviour": {
+      "home": {
+        "title": "Achievement Behaviours",
+        "createLabel": "Create a new Achievement Behaviour",
+        "createOrEditLabel": "Create or edit a Achievement Behaviour",
+        "notFound": "No Achievement Behaviours found"
+      },
+      "created": "A new Achievement Behaviour is created with identifier {{ param }}",
+      "updated": "A Achievement Behaviour is updated with identifier {{ param }}",
+      "deleted": "A Achievement Behaviour is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Achievement Behaviour {{ id }}?"
+      },
+      "detail": {
+        "title": "Achievement Behaviour"
+      },
+      "times": "Times",
+      "achievement": "Achievement",
+      "behaviour": "Behaviour"
+    }
+  }
+}

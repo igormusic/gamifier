@@ -7,6 +7,14 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "employee": "Employee",
+        "team": "Team",
+        "behaviour": "Behaviour",
+        "level": "Level",
+        "achievement": "Achievement",
+        "achievementBehaviour": "Achievement Behaviour",
+        "activity": "Activity",
+        "achievementProgress": "Achievement Progress",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

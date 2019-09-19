@@ -1,0 +1,32 @@
+{
+    "name": "Achievement",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": 3
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "achievementBehaviour",
+            "otherEntityRelationshipName": "achievement",
+            "relationshipName": "behaviour"
+        }
+    ],
+    "changelogDate": "20190919034425",
+    "entityTableName": "achievement",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

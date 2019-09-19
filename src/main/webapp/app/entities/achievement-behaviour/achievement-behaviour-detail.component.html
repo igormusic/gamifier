@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="achievementBehaviour">
+            <h2><span jhiTranslate="gamifierApp.achievementBehaviour.detail.title">Achievement Behaviour</span> {{achievementBehaviour.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="gamifierApp.achievementBehaviour.times">Times</span></dt>
+                <dd>
+                    <span>{{achievementBehaviour.times}}</span>
+                </dd>
+                <dt><span jhiTranslate="gamifierApp.achievementBehaviour.achievement">Achievement</span></dt>
+                <dd>
+                    <div *ngIf="achievementBehaviour.achievementId">
+                        <a [routerLink]="['/achievement', achievementBehaviour.achievementId, 'view']">{{achievementBehaviour.achievementName}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="gamifierApp.achievementBehaviour.behaviour">Behaviour</span></dt>
+                <dd>
+                    <div *ngIf="achievementBehaviour.behaviourId">
+                        <a [routerLink]="['/behaviour', achievementBehaviour.behaviourId, 'view']">{{achievementBehaviour.behaviourName}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/achievement-behaviour', achievementBehaviour.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
