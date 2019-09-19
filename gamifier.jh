@@ -1,0 +1,70 @@
+entity Employee {
+    name String required
+    email String required
+    externalReference String
+}
+
+entity Team {
+	teamName String required
+}
+
+entity Behaviour{
+	name String required unique minlength(3)
+    points Integer required min(1) 
+}
+
+entity Level{
+	name String required unique minlength(3)
+    points Integer required min(1) 
+}
+
+entity Achievement {
+	name String required unique minlength(3) 
+}
+
+entity AchievementBehaviour {
+	times Integer required min(1)
+}
+
+entity Activity {
+	dateTime Instant
+}
+
+enum AchievementStatus {
+    PENDING, COMPLETE
+  }
+  
+  entity AchievementProgress {
+  	Status AchievementStatus
+  }
+
+relationship OneToMany{
+	Employee{activity} to Activity{employee(name)}
+}
+
+relationship ManyToMany{
+	AchievementProgress{activity(name)} to Activity{achievementProgress}
+}
+
+relationship ManyToOne {
+	Activity{behaviour(name)} to Behaviour{activity}
+}
+
+relationship OneToMany {
+  Team{employee} to Employee{team(name)}
+}
+
+relationship OneToMany {
+   Achievement{behaviour} to AchievementBehaviour{achievement(name)}
+}
+
+relationship OneToMany {
+	Behaviour{achievement} to AchievementBehaviour{behaviour(name)}
+}
+
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
